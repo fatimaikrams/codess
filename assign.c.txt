@@ -1,0 +1,150 @@
+ #include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<string.h>
+#include<sys/wait.h>
+int main(){
+	int fd[2],fd1[2],fd2[2],fd3[2],fd4[2],fd5[2],fd6[2],fd7[2],fd8[2],fd9[2];
+	int sum=0,sum1=0,sum3=0,sum4=0,sum5=0,sum6=0,sum7=0,sum8=0,sum9=0;
+	int a1,a2,a3,a4,a5,a6,a7,a8,a9;
+	pipe(fd);
+		pipe(fd);
+		pipe(fd1);
+		pipe(fd2);
+		pipe(fd3);
+		pipe(fd4);
+		pipe(fd5);
+		pipe(fd6);
+	    pipe(fd7);
+	    pipe(fd8);
+		pipe(fd9);
+   int cpid=0;
+   if(cpid==0){
+   	for(int i=1;i<=100;i++)
+   		sum=sum+i;
+   	    write(fd[1],sum,sizeof(sum));
+   	    close(fd[0]);
+   }
+   else
+   {
+   	int cpid1=0;
+   if(cpid1==0){
+   	for(int i=101;i<=200;i++)
+   		sum1=sum1+i;
+   	    write(fd1[1],sum1,sizeof(sum1));
+   	    close(fd1[0]);
+   }
+      else
+   {
+   	int cpid2=0;
+   if(cpid2==0){
+   	for(int i=201;i<=300;i++)
+   		sum2=sum2+i;
+   	    write(fd2[1],sum2,sizeof(sum2));
+   	    close(fd2[0]);
+   }
+      else
+   {
+   	int cpid3=0;
+   if(cpid3==0){
+   	for(int i=301;i<=400;i++)
+   		sum3=sum3+i;
+   	    write(fd3[1],sum3,sizeof(sum3));
+   	    close(fd3[0]);
+   }  
+    else
+   {
+   	int cpid4=0;
+   if(cpid4==0){
+   	for(int i=401;i<=500;i++)
+   		sum4=sum4+i;
+   	    write(fd4[1],sum4,sizeof(sum4));
+   	    close(fd4[0]);
+   }   
+   else
+   {
+   	int cpid5=0;
+   if(cpid5==0){
+   	for(int i=501;i<=600;i++)
+   		sum5=sum5+i;
+   	    write(fd5[1],sum5,sizeof(sum5));
+   	    close(fd5[0]);
+   }
+      else
+   {
+   	int cpid6=0;
+   if(cpid6==0){
+   	for(int i=601;i<=700;i++)
+   		sum6=sum6+i;
+   	    write(fd6[1],sum6,sizeof(sum6));
+   	    close(fd6[0]);
+   }
+     else
+   {
+   	int cpid7=0;
+   if(cpid7==0){
+   	for(int i=701;i<=800;i++)
+   		sum7=sum7+i;
+   	    write(fd7[1],sum7,sizeof(sum7));
+   	    close(fd7[0]);
+   }
+      else
+   {
+   	int cpid8=0;
+   if(cpid8==0){
+   	for(int i=801;i<=900;i++)
+   		sum8=sum8+i;
+   	    write(fd8[1],sum8,sizeof(sum8));
+   	    close(fd8[0]);
+   }
+      else
+   {
+   	int cpid9=0;
+   if(cpid9==0){
+   	for(int i=901;i<=1000;i++)
+   		sum9=sum9+i;
+   	    write(fd9[1],sum9,sizeof(sum9));
+   	    close(fd9[0]);
+   }
+   else
+   {
+   	wait(0);
+   	  	wait(0);  
+		wait(0); 
+	 	wait(0);  
+	 	wait(0);
+	 	wait(0);
+  	  	wait(0);
+	 	wait(0);
+    	wait(0);
+		wait(0);
+		  read(fd[0],sum,sizeof(sum));
+		    close(fd[0]);
+		    	  read(fd1[0],sum1,sizeof(sum1));
+		    close(fd1[0]);
+		    	  read(fd2[0],sum2,sizeof(sum2));
+		    close(fd2[0]);
+		    	  read(fd3[0],sum3,sizeof(sum3));
+		    close(fd3[0]);
+		    	  read(fd4[0],sum4,sizeof(sum4));
+		    close(fd4[0]);
+		    	  read(fd5[0],sum5,sizeof(sum5));
+		    close(fd5[0]);
+		    	  read(fd6[0],sum6,sizeof(sum6));
+		    close(fd6[0]);
+		    	  read(fd7[0],sum7,sizeof(sum7));
+		    close(fd7[0]);
+		    	  read(fd8[0],sum8,sizeof(sum8));
+		    close(fd8[0]);
+		    	  read(fd9[0],sum9,sizeof(sum9));
+		    close(fd9[0]);
+		
+   }
+   }
+}}}}}}}}
+int total=sum+sum2+sum3+sum4+sum5+sum6+sum7+sum8+sum9;
+printf("%d",total);
+printf("\n");
+								
+}
